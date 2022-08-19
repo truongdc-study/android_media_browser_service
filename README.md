@@ -1,13 +1,13 @@
 # MediaBrowserService
 Create - create New Class and extents form class MediaBrowserviceCompat()
 
-[1] Initialize the media session
+# Initialize the media session
 
 overide onCreate() menthod 
   * Create and initialize the media session
   * Set the media session callback
   * Set the media session token
-[2] Manage client connection
+# Manage client connection
 
 A [MediaBrowService] has two menthod that handle client connections : 
 - onGetRoot() -> control access to the service 
@@ -39,7 +39,7 @@ override fun onGetRoot(
 } 
 
 
-#Communicating content with onLoadChildren()
+# Communicating content with onLoadChildren()
 
 After the client connects, it can traverse the content hierarchy by making repeated calls to 
 MediaBrowserCompat.subscribe()to build a local representation of the UI
