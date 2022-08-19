@@ -26,7 +26,7 @@ BrowserRoot , but the root ID should represent a empty content hierarchy.
 
 A typical implementation of [onGetRoot()] might look like this.
 
-[override fun onGetRoot(
+override fun onGetRoot(
         clientPackageName: String,
         clientUid: Int,
         rootHints: Bundle?
@@ -37,7 +37,7 @@ A typical implementation of [onGetRoot()] might look like this.
         MediaBrowserServiceCompat.BrowserRoot(MY_EMPTY_MEDIA_ROOT_ID, null)
     }
 } 
-]
+
 
 #Communicating content with onLoadChildren()
 
@@ -56,8 +56,7 @@ A simple implementation of onLoadChildren() might look like this:
 override fun onLoadChildren(
         parentMediaId: String,
         result: MediaBrowserServiceCompat.Result<List<MediaBrowserCompat.MediaItem>>
-) {
-   
+){
     if (MY_EMPTY_MEDIA_ROOT_ID == parentMediaId) {
         result.sendResult(null)
         return
